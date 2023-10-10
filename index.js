@@ -4,6 +4,11 @@ const list = document.querySelector(".list");
 //typeof list = object
 
 const todoArray = [];
+const previousList = JSON.parse(localStorage.getItem("myList"));
+for (let i = 0; i < previousList.length; i++) {
+  title = previousList[i];
+  makeItem(title);
+}
 
 function makeItem(value) {
   //create <div class="item">
@@ -40,12 +45,6 @@ save_button.addEventListener("click", () => {
     syncStorage(val);
     makeItem(val);
     clearTextBox();
-
-    const previousList = JSON.parse(localStorage.getItem("myList"));
-    for (let i = 0; i< previousList.length; i++) {
-      title = previousList[i];
-    //  makeItem(title);
-    }
 
     //convert a java array to json string :JSON.stringify(arrya) Opp of JSON.pase(string)
     // const myCollection = JSON.stringify(todoArray);
