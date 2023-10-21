@@ -7,7 +7,10 @@ const select_items = document.querySelector(".done_filter");
 
 let todoArray = [];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ad72e1ee809ac34d090420c37db3bb34d217b43
 //work with DOM
 function renderItem(todo_item) {
   //create <div class="item">
