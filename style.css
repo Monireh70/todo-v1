@@ -5,14 +5,14 @@
   padding-bottom: 20px;
 }
 .container input {
-  width: 250px;
+  width: 150px;
   height: 30px;
   border-radius: 1rem;
 }
 .container .form {
   margin: 0 auto;
   padding-top: 50px;
-  width: 60%;
+  width: 80%;
 }
 
 .item {
@@ -25,6 +25,7 @@
 
 .delete_btn,
 #delete-some-btn,
+#search-btn,
 #save-btn {
   background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
   border: 0;
@@ -53,7 +54,8 @@
   background: linear-gradient(to bottom right, #47d19c, #9dd5fa);
 }
 
-#save-btn {
+#save-btn,
+#search-btn {
   background: linear-gradient(to bottom right, #cfa2fa, #e7bcce);
 }
 

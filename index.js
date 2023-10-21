@@ -3,14 +3,12 @@ const save_button = document.querySelector("#save-btn");
 const list = document.querySelector(".list");
 const del_some_btn = document.querySelector("#delete-some-btn");
 const select_items = document.querySelector(".done_filter");
+const search_txt = document.querySelector("#search-txt");
+const search_btn = document.querySelector("#search-btn");
 //typeof list = object
 
 let todoArray = [];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4ad72e1ee809ac34d090420c37db3bb34d217b43
 //work with DOM
 function renderItem(todo_item) {
   //create <div class="item">
@@ -136,14 +134,8 @@ function onDelSomeItems() {
 
   todoArray = delSomeArr;
 
-  // for (let i = 0; i < todoArray.length; i++) {
-  //   if (todoArray[i].status === true) {
-  //     todoArray.splice(i, 1);
-  //   }
-  // }
   syncStorage();
   renderList();
-  console.log("list", todoArray);
 }
 
 //Run app
@@ -178,6 +170,20 @@ function events() {
     }
     renderList();
     // renderList();
+  });
+
+  search_btn.addEventListener("click", () => {
+    const searchArray = todoArray.filter((item) => {
+      if (item.title.includes(search_txt.value)) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    console.log(searchArray);
+    todoArray = searchArray;
+    search_txt.value = "";
+    renderList();
   });
 }
 function init() {
