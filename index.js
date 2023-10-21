@@ -6,7 +6,7 @@ const select_items = document.querySelector(".done_filter");
 //typeof list = object
 
 let todoArray = [];
-let filterarray = [];
+
 
 //work with DOM
 function renderItem(todo_item) {
